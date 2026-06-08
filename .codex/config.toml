@@ -1,0 +1,105 @@
+personality = "pragmatic"
+model = "gpt-5.5"
+model_reasoning_effort = "medium"
+plan_mode_reasoning_effort = "medium"
+
+[projects."/Users/bunnypro"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Projects/speaking-agent"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Projects/refinitiv-search"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Learn"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Projects/recsys-group-project"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Documents/New project"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/VoiceInk"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Projects/ultrabooklm"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Projects/session-based-recsys-ddm"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Projects/session-based-recsys-ddm/ddm-diginetica-recommendation"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Documents/ddm-diginetica-recommendation"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Projects/news-sentiments-analysis"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Learn/ai-roadmap"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/vscode"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Projects/monetary_policy_fdi_analysis"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Projects/ada_sale_agent_b2b2c"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/terminal"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Projects/bunnyielts"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Projects/LOGage2026"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/ghostty"]
+trust_level = "trusted"
+
+[notice]
+hide_rate_limit_model_nudge = true
+fast_default_opt_out = true
+
+[notice.model_migrations]
+"gpt-5.3-codex" = "gpt-5.4"
+"gpt-5.2-codex" = "gpt-5.4"
+"gpt-5.2" = "gpt-5.5"
+"gpt-5.4" = "gpt-5.5"
+
+[marketplaces.openai-bundled]
+last_updated = "2026-05-22T12:12:55Z"
+source_type = "local"
+source = "/Users/bunnypro/.codex/.tmp/bundled-marketplaces/openai-bundled"
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4
+
+[desktop]
+composerEnterBehavior = "cmdIfMultiline"
+
+[marketplaces.openai-primary-runtime]
+last_updated = "2026-04-27T10:34:10Z"
+source_type = "local"
+source = "/Users/bunnypro/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+
+[features]
+memories = true
+
+[tui]
+notification_condition = "always"

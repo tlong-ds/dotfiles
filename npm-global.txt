@@ -1,0 +1,10 @@
+@google/gemini-cli
+@openai/codex
+clawhub
+markdownlint-cli
+mcporter
+n8n
+openclaw
+pnpm
+to
+update
