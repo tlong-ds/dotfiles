@@ -12,11 +12,10 @@ My personal system configurations, tools, and coding agents setup for macOS.
   * Claude (`.claude.json`)
   * Codex (`.codex/config.toml`)
   * Antigravity (`.antigravity/argv.json`)
-* **Window Manager**: `Aerospace` (`.aerospace.toml`) and `skhd` (`.skhdrc`).
+* **Hotkey Daemon**: `skhd` (`.skhdrc`).
 * **Applications**:
   * Neovim (based on kickstart.nvim)
   * Ghostty
-  * Karabiner-Elements
   * Zed Editor
   * fish shell
   * btop
