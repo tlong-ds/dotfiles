@@ -219,12 +219,13 @@ rangdong-stop() {
 
 export ANTHROPIC_BASE_URL="http://localhost:11434"
 export ANTHROPIC_API_KEY="ollama"
-export ANTHROPIC_MODEL="gemma4:12b"
+export ANTHROPIC_MODEL="gemma4:12b-optimized" # Built from ~/gemma4-optimized.Modelfile
 
 # Ollama Optimization Environment Variables
 export OLLAMA_FLASH_ATTENTION=1
 export OLLAMA_NUM_PARALLEL=1
 export OLLAMA_KEEP_ALIVE=30m
+export OLLAMA_KV_CACHE_TYPE="q8_0" # Options: q8_0 (Recommended, saves 50% VRAM), q4_0 (saves 75% VRAM), f16 (default)
 
 
 export PATH="/Users/bunnypro/.antigravity-ide/antigravity-ide/bin:$PATH"
