@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.en">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.bunnypro.microphone-protector</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/bunnypro/Applications/MicrophoneProtector.app/Contents/MacOS/applet</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/bunnypro/Library/Logs/microphone-protector.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/bunnypro/Library/Logs/microphone-protector-error.log</string>
+</dict>
+</plist>

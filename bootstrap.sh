@@ -108,6 +108,10 @@ FILES_TO_LINK=(
     ".config/zed" ".config/zed"
     ".config/fish" ".config/fish"
     ".config/btop" ".config/btop"
+    "bin/audio-manager.swift" "bin/audio-manager.swift"
+    "bin/microphone_protector.applescript" "bin/microphone_protector.applescript"
+    "bin/setup-microphone-protector.sh" "bin/setup-microphone-protector.sh"
+    "Library/LaunchAgents/com.bunnypro.microphone-protector.plist" "Library/LaunchAgents/com.bunnypro.microphone-protector.plist"
 )
 
 for ((i=0; i<${#FILES_TO_LINK[@]}; i+=2)); do
@@ -147,6 +151,15 @@ done
 if [ -d "$BACKUP_DIR" ] && [ -z "$(ls -A "$BACKUP_DIR")" ]; then
     rmdir "$BACKUP_DIR"
     echo "No existing files to back up. Backup folder cleaned up."
+fi
+
+# ----------------------------------------------------
+# 4. Initialize Microphone Protector
+# ----------------------------------------------------
+if [ -f "$HOME/bin/setup-microphone-protector.sh" ]; then
+    echo "Setting up Microphone Protector..."
+    chmod +x "$HOME/bin/setup-microphone-protector.sh"
+    "$HOME/bin/setup-microphone-protector.sh"
 fi
 
 echo "==========================================="
