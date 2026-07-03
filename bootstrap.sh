@@ -112,6 +112,7 @@ FILES_TO_LINK=(
     "bin/microphone_protector.applescript" "bin/microphone_protector.applescript"
     "bin/setup-microphone-protector.sh" "bin/setup-microphone-protector.sh"
     "Library/LaunchAgents/com.bunnypro.microphone-protector.plist" "Library/LaunchAgents/com.bunnypro.microphone-protector.plist"
+    "Library/Scripts/Folder Action Scripts/OrganizeDownloads.applescript" "Library/Scripts/Folder Action Scripts/OrganizeDownloads.applescript"
 )
 
 for ((i=0; i<${#FILES_TO_LINK[@]}; i+=2)); do
@@ -160,6 +161,14 @@ if [ -f "$HOME/bin/setup-microphone-protector.sh" ]; then
     echo "Setting up Microphone Protector..."
     chmod +x "$HOME/bin/setup-microphone-protector.sh"
     "$HOME/bin/setup-microphone-protector.sh"
+fi
+
+# ----------------------------------------------------
+# 5. Compile Folder Action Scripts
+# ----------------------------------------------------
+if [ -f "$HOME/Library/Scripts/Folder Action Scripts/OrganizeDownloads.applescript" ]; then
+    echo "Compiling Folder Action Scripts..."
+    osacompile -o "$HOME/Library/Scripts/Folder Action Scripts/OrganizeDownloads.scpt" "$HOME/Library/Scripts/Folder Action Scripts/OrganizeDownloads.applescript"
 fi
 
 echo "==========================================="
