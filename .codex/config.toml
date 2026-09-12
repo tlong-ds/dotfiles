@@ -107,6 +107,9 @@ trust_level = "trusted"
 [projects."/Users/bunnypro/Documents/Codex/2026-09-12/la"]
 trust_level = "trusted"
 
+[projects."/Users/bunnypro/Documents/Codex/2026-09-12/gi"]
+trust_level = "trusted"
+
 [notice]
 hide_rate_limit_model_nudge = true
 fast_default_opt_out = true

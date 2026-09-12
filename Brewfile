@@ -8,38 +8,26 @@ tap "nikitabobko/tap", trusted: { casks: ["libreoffice", "libreoffice-custom"] }
 tap "openclaw/tap"
 tap "steipete/tap"
 tap "techopolis/tap"
-# Extremely Fast Compression algorithm
-brew "lz4"
-# Zstandard is a real-time compression algorithm
-brew "zstd"
-# TIFF library and utilities
-brew "libtiff"
-# New file format for still image compression
-brew "jpeg-xl"
-# ANSI/ASCII art to PNG converter
-brew "ansilove"
-# Core application library for C
-brew "glib"
 # Automatic configure script builder
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+# Extremely Fast Compression algorithm
+brew "lz4"
+# Zstandard is a real-time compression algorithm
+brew "zstd"
 # Collection of portable C++ source libraries
 brew "boost"
 # Extract files from Microsoft cabinet files
 brew "cabextract"
+# Core application library for C
+brew "glib"
 # Vector graphics library with cross-device output support
 brew "cairo"
 # Modern, C++-native, test framework
 brew "catch2"
-# GNU compiler collection
-brew "gcc"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
-# High performance message passing library
-brew "open-mpi"
-# Console-based Audio Visualizer for ALSA
-brew "cava"
 # Object-file caching compiler wrapper
 brew "ccache"
 # Cloudflare Tunnel client (formerly Argo Tunnel)
@@ -60,6 +48,10 @@ brew "ffmpeg"
 brew "fluid-synth"
 # Command-line tools for fly.io services
 brew "flyctl"
+# TIFF library and utilities
+brew "libtiff"
+# New file format for still image compression
+brew "jpeg-xl"
 # Toolkit for image loading and pixel buffer manipulation
 brew "gdk-pixbuf"
 # GitHub command-line tool
@@ -94,22 +86,12 @@ brew "helm"
 brew "hidapi"
 # Tools and libraries to manipulate images in select formats
 brew "imagemagick"
-# Enhanced version of john, a UNIX password cracker
-brew "john-jumbo"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Open-source, cross-platform JavaScript runtime environment
-brew "node"
-# Swiss-army knife of markup format conversion
-brew "pandoc"
-# Interactive environments for writing and running code
-brew "jupyterlab"
 # Tool that can switch between kubectl contexts easily and create aliases
 brew "kubectx"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
-# LaTeX-to-HTML translator
-brew "latex2html"
 # GNOME XML library
 brew "libxml2"
 # C XSLT library for GNOME
@@ -130,8 +112,8 @@ brew "neovim"
 brew "ninja"
 # JSON for modern C++
 brew "nlohmann-json"
-# Package for scientific computing with Python
-brew "numpy"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
 # Oracle Cloud Infrastructure CLI
 brew "oci-cli"
 # AI coding agent, built for the terminal
@@ -140,26 +122,20 @@ brew "opencode"
 brew "openjdk@17"
 # 7-Zip (high compression file archiver) implementation
 brew "p7zip"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
 # Highly capable, feature-rich programming language
 brew "perl"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
-# Object-relational database system
-brew "postgresql@14"
 # Theme for zsh
 brew "powerlevel10k"
 # Protocol buffers (Google's data interchange format)
 brew "protobuf"
-# Cross-platform application and UI framework
-brew "qt@5"
-# Software environment for statistical computing
-brew "r"
 # Command-line interface for Render
 brew "render"
-# Software for mathematics, science, and engineering
-brew "scipy"
 # Library for loading images as SDL surfaces and textures
 brew "sdl2_image"
 # Sample multi-channel audio mixer library
@@ -172,8 +148,6 @@ brew "sevenzip"
 brew "smartmontools"
 # Speex audio processing library
 brew "speexdsp"
-# Multi-modal AI tool to extract and summarize content
-brew "summarize"
 # Enables extra languages support for Tesseract
 brew "tesseract-lang"
 # Terminal multiplexer
@@ -190,8 +164,6 @@ brew "wget"
 brew "xcodegen"
 # JavaScript package manager
 brew "yarn"
-# GTK+ dialog boxes for the command-line
-brew "zenity"
 # Programming language designed for robustness, optimality, and clarity
 brew "zig", link: false
 # General-purpose lossless data-compression library
@@ -213,6 +185,7 @@ cask "ngrok"
 # Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
 # Development environment
+cask "vagrant"
 cargo "cargo-about"
 cargo "cargo-bundle", source: "https://github.com/zed-industries/cargo-bundle.git?branch=zed-deploy"
 uv "graphifyy"
