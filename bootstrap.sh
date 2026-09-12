@@ -179,6 +179,23 @@ if [ -f "$DOTFILES_DIR/google_iwork_shortcuts/apply_shortcuts.sh" ]; then
     "$DOTFILES_DIR/google_iwork_shortcuts/apply_shortcuts.sh"
 fi
 
+# ----------------------------------------------------
+# 7. Ensure Custom Oh-My-Zsh Plugins
+# ----------------------------------------------------
+ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
+if [ -d "$HOME/.oh-my-zsh" ]; then
+    echo "Ensuring Oh-My-Zsh custom plugins are installed..."
+    mkdir -p "$ZSH_CUSTOM/plugins"
+    if [ ! -d "$ZSH_CUSTOM/plugins/zsh-autocomplete" ]; then
+        echo "Cloning zsh-autocomplete..."
+        git clone --depth 1 https://github.com/marlonrichert/zsh-autocomplete.git "$ZSH_CUSTOM/plugins/zsh-autocomplete"
+    fi
+    if [ ! -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ]; then
+        echo "Cloning zsh-syntax-highlighting..."
+        git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
+    fi
+fi
+
 echo "==========================================="
 echo "   Dotfiles Bootstrapping Completed!      "
 echo "==========================================="

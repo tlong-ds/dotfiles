@@ -12,7 +12,7 @@ ZSH_THEME="robbyrussell"
 
 plugins=(
   git
-  zsh-autosuggestions
+  zsh-autocomplete
   zsh-syntax-highlighting
 )
 
