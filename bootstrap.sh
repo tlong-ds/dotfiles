@@ -98,7 +98,6 @@ FILES_TO_LINK=(
     ".gitconfig" ".gitconfig"
     ".gitignore" ".gitignore"
     ".skhdrc" ".skhdrc"
-    ".condarc" ".condarc"
     ".xonshrc" ".xonshrc"
     ".claude.json" ".claude.json"
     ".antigravity/argv.json" ".antigravity/argv.json"
@@ -169,6 +168,15 @@ fi
 if [ -f "$HOME/Library/Scripts/Folder Action Scripts/OrganizeDownloads.applescript" ]; then
     echo "Compiling Folder Action Scripts..."
     osacompile -o "$HOME/Library/Scripts/Folder Action Scripts/OrganizeDownloads.scpt" "$HOME/Library/Scripts/Folder Action Scripts/OrganizeDownloads.applescript"
+fi
+
+# ----------------------------------------------------
+# 6. Apply Google Shortcuts for Apple iWork
+# ----------------------------------------------------
+if [ -f "$DOTFILES_DIR/google_iwork_shortcuts/apply_shortcuts.sh" ]; then
+    echo "Applying Google Shortcuts to Apple iWork apps..."
+    chmod +x "$DOTFILES_DIR/google_iwork_shortcuts/apply_shortcuts.sh"
+    "$DOTFILES_DIR/google_iwork_shortcuts/apply_shortcuts.sh"
 fi
 
 echo "==========================================="

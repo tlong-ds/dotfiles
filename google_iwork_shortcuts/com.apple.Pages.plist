@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSUserKeyEquivalents</key>
+	<dict>
+		<key>Align Center</key>
+		<string>@$e</string>
+		<key>Align Centre</key>
+		<string>@$e</string>
+		<key>Align Left</key>
+		<string>@$l</string>
+		<key>Align Right</key>
+		<string>@$r</string>
+		<key>Comment</key>
+		<string>@~m</string>
+		<key>Footnote</key>
+		<string>@~f</string>
+		<key>Justify</key>
+		<string>@$j</string>
+		<key>Paste and Match Style</key>
+		<string>@$v</string>
+		<key>Paste and Preserve Style</key>
+		<string>@$v</string>
+		<key>Show Word Count</key>
+		<string>@$c</string>
+		<key>Strikethrough</key>
+		<string>@$x</string>
+		<key>Subscript</key>
+		<string>@,</string>
+		<key>Superscript</key>
+		<string>@.</string>
+	</dict>
+</dict>
+</plist>
