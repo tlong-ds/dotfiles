@@ -1,16 +1,8 @@
+# Docker CLI tools
+[[ -d "/Users/bunnypro/.docker/bin" ]] && export PATH="$PATH:/Users/bunnypro/.docker/bin"
 
-# Setting PATH for Python 3.12
-# The original version is saved in .zprofile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.12/bin:${PATH}"
-export PATH
-
+# Homebrew environment
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-
-# Added by Toolbox App
-export PATH="$PATH:/Users/bunnypro/Library/Application Support/JetBrains/Toolbox/scripts"
-
-
-
-# Added by Antigravity CLI installer
+# User local binaries (uv, pipx, local CLI tools)
 export PATH="/Users/bunnypro/.local/bin:$PATH"

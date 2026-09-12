@@ -9,6 +9,6 @@
 [credential "https://huggingface.co"]
 	provider = generic
 [credential]
-	helper = store
+	helper = osxkeychain
 [init]
 	defaultBranch = main

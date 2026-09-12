@@ -1,7 +1,9 @@
 personality = "pragmatic"
-model = "gpt-5.5"
-model_reasoning_effort = "medium"
-plan_mode_reasoning_effort = "medium"
+model = "gpt-5.6-terra"
+model_reasoning_effort = "high"
+plan_mode_reasoning_effort = "high"
+notify = [ "/Users/bunnypro/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended" ]
+service_tier = "default"
 
 [projects."/Users/bunnypro"]
 trust_level = "trusted"
@@ -63,6 +65,48 @@ trust_level = "trusted"
 [projects."/Users/bunnypro/ghostty"]
 trust_level = "trusted"
 
+[projects."/Users/bunnypro/Projects/xai-in-vnedu"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Projects/vnedu-cot"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Projects/english-learning-game"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Projects/finlens-ai"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/.codex/.chatgpt-projects/g-p-6a7f3ab909f48191a3155c137d96ebc1"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Documents/Codex/2026-08-16/plugin-management-plugin-plugin-management-openai"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Documents/Codex/2026-08-16/plugin-management-plugin-plugin-management-openai-2"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Projects/daai-react-demo"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Documents/Codex/2026-08-21/rea"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Documents/ChatGPT/deeplearning"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Documents/Codex/2026-08-25/s-v-n-thi-t-k"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Documents/Codex/2026-09-10/create-an-image-of"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Documents/Codex/2026-09-11/realtime-voice-chat"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Documents/Codex/2026-09-12/la"]
+trust_level = "trusted"
+
 [notice]
 hide_rate_limit_model_nudge = true
 fast_default_opt_out = true
@@ -72,22 +116,69 @@ fast_default_opt_out = true
 "gpt-5.2-codex" = "gpt-5.4"
 "gpt-5.2" = "gpt-5.5"
 "gpt-5.4" = "gpt-5.5"
+"gpt-5.4-mini" = "gpt-5.6-luna"
 
 [marketplaces.openai-bundled]
-last_updated = "2026-05-22T12:12:55Z"
 source_type = "local"
 source = "/Users/bunnypro/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
+[marketplaces.openai-primary-runtime]
+source_type = "local"
+source = "/Users/bunnypro/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+
+[marketplaces.claude-cowork]
+source_type = "local"
+source = "/Users/bunnypro/.codex/plugins/cache/claude-cowork"
+
+[marketplaces.academic-research-skills]
+last_updated = "2026-08-19T11:37:33Z"
+source_type = "git"
+source = "https://github.com/Imbad0202/academic-research-skills.git"
+
+[mcp_servers.node_repl]
+args = []
+command = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl"
+startup_timeout_sec = 120
+
+[mcp_servers.node_repl.env]
+NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+NODE_REPL_NODE_MODULE_DIRS = "/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
+NODE_REPL_NODE_PATH = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node"
+NODE_REPL_TRUSTED_CODE_PATHS = "/Users/bunnypro/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
+CODEX_HOME = "/Users/bunnypro/.codex"
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+BROWSER_USE_TINYSKY_ENABLED = "1"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = ""
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = ""
+NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = ""
+BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+BROWSER_USE_CODEX_APP_VERSION = "26.908.31748"
+NODE_REPL_TRUSTED_SERVICES = '{"browser":"/Users/bunnypro/.codex/plugins/cache/openai-bundled/browser/26.908.31748/scripts/browser-service.mjs","sky":"@oai/sky/service"}'
+SKY_CUA_SERVICE_PATH = "/Users/bunnypro/.codex/computer-use/Codex Computer Use.app"
+CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
+
+[mcp_servers.computer-use]
+command = "./Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient"
+args = ["mcp"]
+cwd = "."
+enabled = false
+
+[tui]
+notification_condition = "always"
+
 [tui.model_availability_nux]
 "gpt-5.5" = 4
+gpt-6-astra = 4
+
+[shell_environment_policy.set]
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "9230e2bd8b24b7ac7a0ba6774c64bf0d78ecdabbdd91d0ed627b02a587bae2df"
 
 [desktop]
 composerEnterBehavior = "cmdIfMultiline"
-
-[marketplaces.openai-primary-runtime]
-last_updated = "2026-04-27T10:34:10Z"
-source_type = "local"
-source = "/Users/bunnypro/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+followUpQueueMode = "queue"
+dock-icon-preference = "app-default"
+conversationDetailMode = "STEPS_PROSE"
+external-agent-import-sync-enabled = true
 
 [plugins."documents@openai-primary-runtime"]
 enabled = true
@@ -98,8 +189,53 @@ enabled = true
 [plugins."presentations@openai-primary-runtime"]
 enabled = true
 
+[plugins."sites@openai-bundled"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[plugins."visualize@openai-bundled"]
+enabled = true
+
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
+
+[plugins."template-creator@openai-primary-runtime"]
+enabled = true
+
+[plugins."google-calendar@openai-curated"]
+enabled = true
+
+[plugins."slack@openai-curated"]
+enabled = true
+
+[plugins."cowork-plugin-management@claude-cowork"]
+enabled = true
+
+[plugins."codex-app-tools@openai-bundled"]
+enabled = true
+
+[plugins."academic-research-skills@academic-research-skills"]
+enabled = true
+
+[plugins."unified-computer-use@openai-bundled"]
+enabled = true
+
+[plugins."computer-use@openai-bundled"]
+enabled = true
+
 [features]
 memories = true
+js_repl = false
 
-[tui]
-notification_condition = "always"
+[hooks.state]
+
+[hooks.state."academic-research-skills@academic-research-skills:hooks/hooks.json:pre_tool_use:0:0"]
+trusted_hash = "sha256:0f1b53067103c5b4bd1dac1c951d9148f14b164b4240aa3c9d21171caed2ca01"
+
+[hooks.state."academic-research-skills@academic-research-skills:hooks/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:ec70cf5a9224931739c39e8ee3146d7905e7b6b39d38c7660320462ac7acef6b"
+
+[sandbox_workspace_write]
+writable_roots = ["/Users/bunnypro/Library/Application Support/codex-with-chatgpt"]

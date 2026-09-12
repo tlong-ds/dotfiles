@@ -2,3 +2,13 @@
 .claw/settings.local.json
 .claw/sessions/
 .clawhip/
+
+# OS artifacts
+.DS_Store
+*.DS_Store
+Library/.DS_Store
+
+# Zed credentials & local prompt database
+.config/zed/development_credentials
+.config/zed/prompts/**/*.mdb
+*.mdb

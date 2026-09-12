@@ -1,119 +1,223 @@
 tap "antoniorodr/memo"
+tap "asmvik/formulae", "https://github.com/asmvik/homebrew-formulae.git"
 tap "hashicorp/tap"
+tap "homebrew/core"
 tap "homebrew/services"
-tap "italomandara/cxpatcher"
-tap "koekeishiya/formulae"
+tap "italomandara/cxpatcher", "https://github.com/italomandara/homebrew-CXPatcher"
+tap "nikitabobko/tap", trusted: { casks: ["libreoffice", "libreoffice-custom"] }
 tap "openclaw/tap"
 tap "steipete/tap"
 tap "techopolis/tap"
+# Extremely Fast Compression algorithm
 brew "lz4"
+# Zstandard is a real-time compression algorithm
 brew "zstd"
+# TIFF library and utilities
 brew "libtiff"
+# New file format for still image compression
 brew "jpeg-xl"
+# ANSI/ASCII art to PNG converter
 brew "ansilove"
+# Core application library for C
 brew "glib"
+# Automatic configure script builder
+brew "autoconf"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
+# Collection of portable C++ source libraries
 brew "boost"
+# Extract files from Microsoft cabinet files
 brew "cabextract"
+# Vector graphics library with cross-device output support
 brew "cairo"
+# Modern, C++-native, test framework
 brew "catch2"
+# GNU compiler collection
+brew "gcc"
+# Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
+# High performance message passing library
 brew "open-mpi"
+# Console-based Audio Visualizer for ALSA
 brew "cava"
+# Object-file caching compiler wrapper
 brew "ccache"
+# Cloudflare Tunnel client (formerly Argo Tunnel)
+brew "cloudflared"
+# Cross-platform make
 brew "cmake"
+# Load/unload environment variables based on $PWD
 brew "direnv"
+# Pack, ship and run any application as a lightweight container
 brew "docker", link: false
+# Like neofetch, but much faster because written mostly in C
 brew "fastfetch"
-brew "sdl2"
+# SDL2 compatibility layer that uses SDL3 behind the scenes
+brew "sdl2-compat"
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
+# Real-time software synthesizer based on the SoundFont 2 specs
 brew "fluid-synth"
+# Command-line tools for fly.io services
 brew "flyctl"
+# Toolkit for image loading and pixel buffer manipulation
 brew "gdk-pixbuf"
+# GitHub command-line tool
 brew "gh"
+# OpenType text shaping engine
 brew "harfbuzz"
+# Framework for layout and rendering of i18n text
 brew "pango"
+# OCR (Optical Character Recognition) engine
 brew "tesseract"
+# Interpreter for PostScript and PDF
 brew "ghostscript"
+# Distributed revision control system
+brew "git"
+# Tcl/Tk UI for the git revision control system
+brew "git-gui"
+# Git extension for versioning large files
 brew "git-lfs"
+# OpenGL and OpenGL ES reference compiler for shading languages
 brew "glslang"
-brew "go"
-brew "grafana"
-brew "graphviz"
-brew "helm"
-brew "hidapi"
-brew "imagemagick"
-brew "jenkins-lts", restart_service: :changed
-brew "john-jumbo"
-brew "jq"
-brew "kubectx"
-brew "kubernetes-cli"
-brew "latex2html"
-brew "libffi"
+# Library for USB device access
 brew "libusb"
-brew "llmfit"
-brew "mactop"
-brew "molten-vk"
-brew "neofetch"
-brew "tree-sitter"
-brew "neovim"
-brew "ninja"
-brew "nlohmann-json"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Generic library support script
+brew "libtool"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+# Kubernetes package manager
+brew "helm"
+# Library for communicating with USB and Bluetooth HID devices
+brew "hidapi"
+# Tools and libraries to manipulate images in select formats
+brew "imagemagick"
+# Enhanced version of john, a UNIX password cracker
+brew "john-jumbo"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
-brew "numpy"
-brew "oci-cli"
-brew "p7zip"
+# Swiss-army knife of markup format conversion
 brew "pandoc"
+# Interactive environments for writing and running code
+brew "jupyterlab"
+# Tool that can switch between kubectl contexts easily and create aliases
+brew "kubectx"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
+# LaTeX-to-HTML translator
+brew "latex2html"
+# GNOME XML library
+brew "libxml2"
+# C XSLT library for GNOME
+brew "libxslt"
+# Find what models run on your hardware
+brew "llmfit"
+# Apple Silicon Monitor Top written in Go Lang
+brew "mactop"
+# Implementation of the Vulkan graphics and compute API on top of Metal
+brew "molten-vk"
+# Fast, highly customisable system info script
+brew "neofetch"
+# Incremental parsing library
+brew "tree-sitter"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Small build system for use with gyp or CMake
+brew "ninja"
+# JSON for modern C++
+brew "nlohmann-json"
+# Package for scientific computing with Python
+brew "numpy"
+# Oracle Cloud Infrastructure CLI
+brew "oci-cli"
+# AI coding agent, built for the terminal
+brew "opencode"
+# Development kit for the Java programming language
+brew "openjdk@17"
+# 7-Zip (high compression file archiver) implementation
+brew "p7zip"
+# Highly capable, feature-rich programming language
+brew "perl"
+# Package compiler and linker metadata toolkit
 brew "pkgconf"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
+# Object-relational database system
 brew "postgresql@14"
+# Theme for zsh
 brew "powerlevel10k"
-brew "prometheus"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
+# Cross-platform application and UI framework
 brew "qt@5"
+# Software environment for statistical computing
 brew "r"
+# Command-line interface for Render
 brew "render"
-brew "rust"
+# Software for mathematics, science, and engineering
 brew "scipy"
+# Library for loading images as SDL surfaces and textures
 brew "sdl2_image"
+# Sample multi-channel audio mixer library
 brew "sdl2_mixer"
+# Library for using TrueType fonts in SDL applications
 brew "sdl2_ttf"
+# 7-Zip is a file archiver with a high compression ratio
 brew "sevenzip"
+# SMART hard drive monitoring
 brew "smartmontools"
+# Speex audio processing library
 brew "speexdsp"
+# Multi-modal AI tool to extract and summarize content
 brew "summarize"
+# Enables extra languages support for Tesseract
 brew "tesseract-lang"
+# Terminal multiplexer
 brew "tmux"
+# Parser generator tool
 brew "tree-sitter-cli"
+# Vulkan ICD Loader
 brew "vulkan-loader"
+# Executes a program periodically, showing output fullscreen
 brew "watch"
+# Internet file retriever
 brew "wget"
+# Generate your Xcode project from a spec file and your folder structure
 brew "xcodegen"
+# JavaScript package manager
 brew "yarn"
+# GTK+ dialog boxes for the command-line
 brew "zenity"
+# Programming language designed for robustness, optimality, and clarity
 brew "zig", link: false
-brew "zig@0.15", link: true
-brew "antoniorodr/memo/memo"
-brew "hashicorp/tap/terraform"
-brew "koekeishiya/formulae/skhd"
-brew "openclaw/tap/gogcli"
-brew "steipete/tap/imsg"
-brew "steipete/tap/peekaboo"
-brew "steipete/tap/remindctl"
-brew "steipete/tap/sag"
-cask "steipete/tap/codexbar"
+# General-purpose lossless data-compression library
+brew "zlib"
+cask "codexbar"
+# Brings the power of Copilot coding agent directly to your terminal
 cask "copilot-cli"
+# App to build and share containerised applications and microservices
 cask "docker-desktop"
+# Online diagram software
+cask "drawio"
 cask "font-meslo-lg-nerd-font"
+# Open Source Multimedia Framework
 cask "gstreamer-runtime"
+# Free cross-platform office suite, fresh version
+cask "libreoffice"
+# Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
+# Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
-cask "vagrant"
-uv "nano-pdf"
-npm "@google/gemini-cli"
+# Development environment
+cargo "cargo-about"
+cargo "cargo-bundle", source: "https://github.com/zed-industries/cargo-bundle.git?branch=zed-deploy"
+uv "graphifyy"
+npm "@gitlawb/openclaude"
 npm "@openai/codex"
-npm "clawhub"
-npm "markdownlint-cli"
-npm "mcporter"
-npm "n8n"
-npm "openclaw"
-npm "pnpm"
-npm "to"
-npm "update"
+npm "@synsci/openscience"
+npm "corepack"
+npm "skillkit"

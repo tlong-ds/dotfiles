@@ -1,14 +1,13 @@
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-if test -f /Users/bunnypro/miniconda3/bin/conda
-    eval /Users/bunnypro/miniconda3/bin/conda "shell.fish" "hook" $argv | source
-else
-    if test -f "/Users/bunnypro/miniconda3/etc/fish/conf.d/conda.fish"
-        . "/Users/bunnypro/miniconda3/etc/fish/conf.d/conda.fish"
-    else
-        set -x PATH "/Users/bunnypro/miniconda3/bin" $PATH
-    end
+# The following lines were added by Docker Desktop to add commands to your PATH.
+if test -d /Users/bunnypro/.docker/bin
+    set -gx PATH /Users/bunnypro/.docker/bin $PATH
 end
-# <<< conda initialize <<<
+# End of Docker Desktop section.
 
+if test -d /opt/homebrew/bin
+    eval (/opt/homebrew/bin/brew shellenv)
+end
+
+if test -d /Users/bunnypro/.local/bin
+    set -gx PATH /Users/bunnypro/.local/bin $PATH
+end
