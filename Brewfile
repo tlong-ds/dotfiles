@@ -82,6 +82,8 @@ brew "go"
 brew "libtool"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
+# Framework for distributed processing of large data sets
+brew "hadoop"
 # Kubernetes package manager
 brew "helm"
 # Library for communicating with USB and Bluetooth HID devices
@@ -165,7 +167,7 @@ brew "wget"
 # Generate your Xcode project from a spec file and your folder structure
 brew "xcodegen"
 # JavaScript package manager
-brew "yarn"
+brew "yarn", link: false
 # Programming language designed for robustness, optimality, and clarity
 brew "zig", link: false
 # General-purpose lossless data-compression library
