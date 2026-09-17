@@ -35,6 +35,17 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls -1 --color=always $realpath'
 zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
+# Remove right prompt from past lines to prevent reflow artifacts on window resize
+setopt transient_rprompt
+
+# Redraw prompt cleanly on window resize
+TRAPWINCH() {
+  if [[ -o zle ]]; then
+    zle reset-prompt
+    zle -R
+  fi
+}
+
 # Direnv hook
 eval "$(direnv hook zsh)"
 
@@ -53,16 +64,19 @@ alias v=nvim
 
 export MLOPS="$HOME/Learn/mlops/course-files"
 
-# NVM (Node Version Manager) Lazy Loader
+# NVM (Node Version Manager)
 export NVM_DIR="$HOME/.nvm"
+if [[ -d "$NVM_DIR/versions/node" ]]; then
+  local nvm_default=$(<"$NVM_DIR/alias/default" 2>/dev/null)
+  [[ -n "$nvm_default" && -d "$NVM_DIR/versions/node/$nvm_default/bin" ]] && \
+    export PATH="$NVM_DIR/versions/node/$nvm_default/bin:$PATH"
+fi
+
 function nvm() {
-    unset -f nvm node npm npx
+    unset -f nvm
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
     nvm "$@"
 }
-function node() { unset -f nvm node npm npx; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"; node "$@" }
-function npm() { unset -f nvm node npm npx; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"; npm "$@" }
-function npx() { unset -f nvm node npm npx; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"; npx "$@" }
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 export N8N_RUNNERS_TASK_BROKER_URI=localhost:5679
