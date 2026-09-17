@@ -5,6 +5,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Ghostty shell integration (ensures subshells and 'exec zsh' match new windows)
+if [[ -n "$GHOSTTY_RESOURCES_DIR" && -f "$GHOSTTY_RESOURCES_DIR/shell-integration/zsh/ghostty-integration" ]]; then
+  source "$GHOSTTY_RESOURCES_DIR/shell-integration/zsh/ghostty-integration"
+fi
+
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -38,13 +43,6 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 # Remove right prompt from past lines to prevent reflow artifacts on window resize
 setopt transient_rprompt
 
-# Redraw prompt cleanly on window resize
-TRAPWINCH() {
-  if [[ -o zle ]]; then
-    zle reset-prompt
-    zle -R
-  fi
-}
 
 # Direnv hook
 eval "$(direnv hook zsh)"

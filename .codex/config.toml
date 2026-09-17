@@ -243,6 +243,7 @@ enabled = true
 [features]
 memories = true
 js_repl = false
+hooks = true
 
 [hooks.state]
 

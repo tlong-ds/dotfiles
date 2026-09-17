@@ -41,9 +41,9 @@
   )
 
   # The list of segments shown on the right. Fill it with less important segments.
-  # Right prompt on the last prompt line (where you are typing your commands) gets
-  # automatically hidden when the input line reaches it. Right prompt above the
-  # last prompt line gets hidden if it would overlap with left prompt.
+  # Display right prompt on the new line (Line #2) so Line #1 stays compact
+  # and never wraps during terminal window resize.
+  typeset -g POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
     status                  # exit code of the last command
@@ -1793,7 +1793,6 @@
   #   - same-dir: Trim down prompt when accepting a command line unless this is the first command
   #               typed after changing current working directory.
   typeset -g POWERLEVEL9K_TRANSIENT_PROMPT=always
-  typeset -g POWERLEVEL9K_TERM_SHELL_INTEGRATION=true
 
   # Instant prompt mode.
   #
