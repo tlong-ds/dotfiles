@@ -12,7 +12,9 @@ ZSH_THEME="robbyrussell"
 
 plugins=(
   git
-  zsh-autocomplete
+  fzf
+  fzf-tab
+  zsh-autosuggestions
   zsh-syntax-highlighting
 )
 
@@ -22,6 +24,13 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# fzf-tab styling & settings
+zstyle ':fzf-tab:*' fzf-bindings 'ctrl-j:down' 'ctrl-k:up'
+zstyle ':fzf-tab:*' switch-group '<' '>'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls -1 --color=always $realpath'
+zstyle ':completion:*:descriptions' format '[%d]'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # Direnv hook
 eval "$(direnv hook zsh)"
@@ -37,6 +46,7 @@ if [[ -d "/Users/bunnypro/.gemini/antigravity-cli/bin" ]]; then
 fi
 
 alias k=kubectl
+alias v=nvim
 
 export MLOPS="$HOME/Learn/mlops/course-files"
 
@@ -58,6 +68,16 @@ export N8N_RUNNERS_AUTH_TOKEN=mySecretToken123
 # Default editor and Vi keybindings
 export EDITOR=nvim
 set -o vi
+export KEYTIMEOUT=15
+
+# Vi keybindings: Autosuggestions & FZF
+bindkey -M viins '^f' autosuggest-accept
+bindkey -M viins '^ ' autosuggest-accept
+bindkey -M viins '^e' forward-word
+bindkey -M viins '^r' fzf-history-widget
+bindkey -M viins '^t' fzf-file-widget
+bindkey -M vicmd '^r' fzf-history-widget
+bindkey -M vicmd '^t' fzf-file-widget
 
 # User local binaries (uv, uv-installed tools, etc.)
 export PATH="/Users/bunnypro/.local/bin:$PATH"

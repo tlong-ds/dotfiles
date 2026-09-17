@@ -185,10 +185,13 @@ fi
 ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
 if [ -d "$HOME/.oh-my-zsh" ]; then
     echo "Ensuring Oh-My-Zsh custom plugins are installed..."
-    mkdir -p "$ZSH_CUSTOM/plugins"
-    if [ ! -d "$ZSH_CUSTOM/plugins/zsh-autocomplete" ]; then
-        echo "Cloning zsh-autocomplete..."
-        git clone --depth 1 https://github.com/marlonrichert/zsh-autocomplete.git "$ZSH_CUSTOM/plugins/zsh-autocomplete"
+    if [ ! -d "$ZSH_CUSTOM/plugins/fzf-tab" ]; then
+        echo "Cloning fzf-tab..."
+        git clone --depth 1 https://github.com/Aloxaf/fzf-tab "$ZSH_CUSTOM/plugins/fzf-tab"
+    fi
+    if [ ! -d "$ZSH_CUSTOM/plugins/zsh-autosuggestions" ]; then
+        echo "Cloning zsh-autosuggestions..."
+        git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions.git "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
     fi
     if [ ! -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ]; then
         echo "Cloning zsh-syntax-highlighting..."

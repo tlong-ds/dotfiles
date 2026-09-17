@@ -48,6 +48,8 @@ brew "ffmpeg"
 brew "fluid-synth"
 # Command-line tools for fly.io services
 brew "flyctl"
+# Command-line fuzzy finder
+brew "fzf"
 # TIFF library and utilities
 brew "libtiff"
 # New file format for still image compression
