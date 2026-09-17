@@ -1,5 +1,5 @@
 # open app
-alt - return : pgrep -x ghostty > /dev/null && osascript -e 'tell application "Ghostty" to new tab' || open -a Ghostty
+alt - return : open -a "supacode"
 alt - b: open -a "Google Chrome"
 
 alt - c: open -a "Zed"
