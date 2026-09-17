@@ -18,6 +18,9 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+# Ensure clean fpath
+fpath=(${fpath:#*zsh-autocomplete*})
+
 source $ZSH/oh-my-zsh.sh
 
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
