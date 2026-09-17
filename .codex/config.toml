@@ -1,6 +1,6 @@
 personality = "pragmatic"
-model = "gpt-5.6-terra"
-model_reasoning_effort = "high"
+model = "gpt-5.6-luna"
+model_reasoning_effort = "medium"
 plan_mode_reasoning_effort = "high"
 notify = [ "/Users/bunnypro/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended" ]
 service_tier = "default"
@@ -108,6 +108,18 @@ trust_level = "trusted"
 trust_level = "trusted"
 
 [projects."/Users/bunnypro/Documents/Codex/2026-09-12/gi"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Documents/Codex/2026-09-15/ph"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Documents/Codex/2026-09-15/referenced-chatgpt-conversation-this-is-an"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Documents/Codex/2026-09-15/referenced-chatgpt-conversation-this-is-an-2"]
+trust_level = "trusted"
+
+[projects."/Users/bunnypro/Documents/Codex/2026-09-15/referenced-chatgpt-conversation-this-is-an-3"]
 trust_level = "trusted"
 
 [notice]
